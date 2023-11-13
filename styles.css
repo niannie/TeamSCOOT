@@ -1,0 +1,413 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+    /* background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 65px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: none;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover {
+    color: #89E36E;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 80vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.5rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+    
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.5s ease-in-out;
+        background: #fff;
+    }
+    
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity:0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.main__img__format {
+    height: 30rem;
+    filter: brightness(40%);
+}
+
+.main__header {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+#main__img {
+    padding: 1.5rem;
+}
+
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered__below {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content__format {
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 25px;
+}
+
+.main__subheading {
+    background: #e6e6e6;
+    color: #32A000;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    display: flex;
+    font-size: 2rem;
+    padding: 35px;
+}
+
+.main__img__container {
+    background: #E6E6E6;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    padding: 2rem 12rem;
+    height: 100%;
+    list-style-type: none;
+}
+
+.main__btn {
+    background: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.main__btn:hover {
+    background: #bbbbbb;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+.contacts__container {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    list-style-type: none;
+}
+
+.contacts__header {
+    color: #32A000;
+}
+
+.main__contact__btn {
+    background: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.main__contact__btn:hover {
+    background: #bbbbbb;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.row__one {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: sticky;
+}
+
+.row__two {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: sticky;
+}
+
+.row__three {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: sticky;
+}
+
+#team__format {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+.row__one__name__container {
+    justify-content: left;
+    display: flex;
+}
+
+.row__one__majors__container {
+    justify-content: left;
+    display: flex;
+}
+
+.team__info__sam {
+    padding: 0 0 0 18rem;
+}
+
+.team__info__mario {
+    padding: 0 0 0 6rem;
+}
+
+.team__info__owen {
+    padding: 0 0 0 10rem;
+}
+
+.majors__format__sam {
+    padding: 0 0 0 21rem;
+}
+
+.majors__format__mario {
+    padding: 0 0 0 8.7rem;
+}
+
+.majors__format__owen {
+    padding: 0 0 0 10rem;
+}
+
+.row__two__name__container {
+    justify-content: left;
+    display: flex;
+}
+
+.row__two__majors__container {
+    justify-content: left;
+    display: flex;
+}
+
+.team__info__angello {
+    padding: 0 0 0 21rem;
+}
+
+.team__info__jake {
+    padding: 0 0 0 10.5rem;
+}
+
+.team__info__annie {
+    padding: 0 0 0 11.5rem;
+}
+
+.majors__format__angello {
+    padding: 0 0 0 24rem;
+}
+
+.majors__format__jake {
+    padding: 0 0 0 12rem;
+}
+
+.majors__format__annie {
+    padding: 0 0 0 8rem;
+}
+
+
+.row__three__name__container {
+    justify-content: left;
+    display: flex;
+}
+
+.row__three__majors__container {
+    justify-content: left;
+    display: flex;
+}
+
+.team__info__tyler {
+    padding: 0 0 0 30rem;
+}
+
+.team__info__zuzanna {
+    padding: 0 0 0 7rem;
+}
+
+.majors__format__tyler {
+    padding: 0 0 0 30rem;
+}
+
+.majors__format__zuzanna {
+    padding: 0 0 0 7rem;
+}
+
+
+#info__format {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+
+.info__content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    padding-left: 10rem;
+}
+
+.content__info {
+    padding: 1rem 0;
+}
+
+.info__description {
+    padding: 0 20rem 0 0;
+}
